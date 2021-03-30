@@ -28,7 +28,7 @@ class Test(unittest.TestCase):
         assert_qz = step.assert_qz
         assert_path = step.assert_path
         mock_res = step.mock_res
-        ts_project_headers = step.public_header.split(',')  # 获取公共请求头
+        ts_project_headers = step.public_header.split(',') if step.public_header != '' else []  # 获取公共请求头
         if api_header == '':
             api_header = '{}'
 
